@@ -40,8 +40,11 @@ install.packages("pastecs")
 
 library(pastecs)
 
+by(TM$Baseline, TM$Group, median)
 
+by(TM$Baseline, TM$Group, range)
 
+by(TM$Baseline, TM$Group, quantile)
 
 
 
