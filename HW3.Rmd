@@ -1,0 +1,42 @@
+---
+title: "HW3"
+author: "Andrew Bermeo"
+date: "2024-10-31"
+output: pdf_document
+---
+
+```{r ,echo=TRUE, warning=FALSE, message=FALSE}
+
+setwd("/cloud/project")
+
+install.packages("readxl")
+#this package is needed to read in an .xlsx file
+
+library(readxl)
+#loading the package and its dependencies
+
+TM <- read.csv("TextMessages.csv")
+#importing the csv data file and referencing it as an object called TM
+
+nrow(TM)
+
+install.packages("ggplot2")
+library(ggplot2)
+
+TM$Group <- as.factor(TM$Group)
+
+is.factor(TM$Group)
+
+boxplot_TMbyGroup <- ggplot(TM, aes(Group,Baseline))
+
+boxplot_TMbyGroup
+
+boxplot_TMbyGroup + geom_boxplot()
+
+
+
+
+
+
+```
+
