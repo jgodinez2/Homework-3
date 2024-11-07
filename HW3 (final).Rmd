@@ -1,3 +1,11 @@
+---
+title: "HW3 (Final)"
+author: "Andrew Bermeo"
+date: "2024-11-07"
+output: pdf_document
+---
+
+```{r ,echo=TRUE, warning=FALSE, message=FALSE}
 setwd("/cloud/project")
 
 install.packages("reshape")
@@ -60,4 +68,5 @@ by(long_data$value, long_data$Group, quantile)
 
 
 
+```
 
