@@ -1,0 +1,52 @@
+---
+title: "Docs"
+author: "Andrew Bermeo"
+date: "2024-11-07"
+output: pdf_document
+---
+
+```{r ,echo=TRUE, warning=FALSE, message=FALSE}
+setwd("/cloud/project")
+
+TM <- read.csv("TextMessages.csv", header = TRUE)
+
+is.factor(TM$Six_months)
+#False
+
+names(TM)
+
+install.packages("pastecs")
+
+library(pastecs)
+
+stat.desc(TM$Baseline)
+
+stat.desc(TM$Six_months)
+
+round(stat.desc(TM$Baseline),2)
+#nbr.val     nbr.null       nbr.na          min          max        range 
+#50.00           0.00         0.00        46.00        89.00        43.00 
+#sum            median       mean       SE.mean CI.mean.0.95          var 
+#3261.00        64.50        65.22         1.51         3.03       113.52 
+#std.dev     coef.var 
+#10.65         0.16 
+
+round(stat.desc(TM$Six_months),2)
+#nbr.val     nbr.null       nbr.na          min          max        range 
+#50.00           0.00         0.00         9.00        79.00        70.00
+#sum           median         mean      SE.mean CI.mean.0.95          var 
+#2870.00        60.50        57.40         1.97         3.96       194.12 
+#std.dev     coef.var 
+#13.93         0.24 
+
+#We can determine that there are 50 observation with 4 variables. The mean for
+#baseline is 65.22 and the mean for six_months is 57.4 which shows there is a
+#decline in text messages between the 2 variables from baseline to six_months.
+#The standard deviation for six_months is 13.93. The min for six_months is 9
+#showing the lowest one person texted. The max is 79 which is lower than the
+#baseline (89). This is indicating that the participants text lower in
+#six_months verses the baseline.
+
+
+```
+
