@@ -1,6 +1,3 @@
-# Homework-3
-group project workspace
-
 #setwd("/cloud/project")
 
 # Install and load required packages
@@ -31,5 +28,7 @@ bar_chart_TMbyTime <- ggplot(long_data, aes(x = Time, y = Value, fill = Group)) 
   labs(x = "Time", y = "Number of Text Messages", title = "Stratified Bar Chart of Text Messages by Time and Group") +
   theme_minimal()
 
+
 # Display the bar chart
 bar_chart_TMbyTime
+
