@@ -2,6 +2,7 @@ setwd("/cloud/project")
 
 TM <- read.csv("TextMessages.csv", header = TRUE)
 
+
 is.factor(TM$Six_months)
 #False
 
@@ -31,11 +32,13 @@ round(stat.desc(TM$Six_months),2)
 #std.dev     coef.var 
 #13.93         0.24 
 
-#We can determine that there are 50 observation with 4 variables.
-#The mean for baseline is 65.22 and the mean for six_months is 57.4 which shows 
-#there is a decline in text messages between the 2 variables from baseline to six_months.
-#The standard deviation for six_months is 13.93. The min for six_months is 9 showing the lowest one person texted.
-#The max is 79 which is lower than the baseline (89). This is indicating that the participants text lower in six_months verses the baseline.
+#We can determine that there are 50 observation with 4 variables. The mean for
+#baseline is 65.22 and the mean for six_months is 57.4 which shows there is a
+#decline in text messages between the 2 variables from baseline to six_months.
+#The standard deviation for six_months is 13.93. The min for six_months is 9
+#showing the lowest one person texted. The max is 79 which is lower than the
+#baseline (89). This is indicating that the participants text lower in
+#six_months verses the baseline.
 
 
 
